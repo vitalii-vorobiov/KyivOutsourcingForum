@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Kyiv Outsoursing Forum</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/img/24231956_1523395924416088_8831846362118098742_n.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+    <header>
+        <div class="navigation-menu-big">
+            <div class="left-menu">
+                <a href="">
+                    <img src="/static/img/logo%20menu.png" alt="kioflogo" class="kioflogo">
+                </a>
+            </div>
+            <div class="right-menu">
+                <a class="right-menu-point" href="http://outsourceforum.org/#contacts"><b>Контакти</b></a>
+                <a class="right-menu-point" href="http://outsourceforum.org/blog/"><b>БЛОГ</b></a>
+                <a class="right-menu-point" href="http://outsourceforum.org/partners-page-2018/"><b>ПАРТНЕРАМ</b></a>
+                <a class="right-menu-point" href="http://outsourceforum.org/speakers_registration/"><b>ДОПОВІДАЧАМ</b></a>
+                <a class="right-menu-point" href="http://outsourceforum.org/registration_standard/"><b>РЕЄСТРАЦІЯ</b></a>
+                <a class="right-menu-point" href="http://outsourceforum.org"><b>ПРО ФОРУМ</b></a>
+                <a class="right-menu-point" href="http://outsourceforum.org"><b>ГОЛОВНА</b></a>
+            </div>
+        </div>
+        <div class="navigation-menu-small">
+            <nav class="navbar navbar-inverse navbar-top" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">
+                            <img src="/static/img/logo/utrend-2-yellow.png" height="30" class="d-inline-block align-top" alt="">
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="http://outsourceforum.org" class="change-new"><b>ГОЛОВНА</b></a></li>
+                            <li><a href="http://outsourceforum.org" class="change-new"><b>ПРО ФОРУМ</b></a></li>
+                            <li><a href="http://outsourceforum.org/registration_standard/" class="change-new"><b>РЕЄСТРАЦІЯ</b></a></li>
+                            <li><a href="http://outsourceforum.org/speakers_registration/" class="change-new"><b>ДОПОВІДАЧАМ</b></a></li>
+                            <li><a href="http://outsourceforum.org/partners-page-2018/" class="change-new"><b>ПАРТНЕРАМ</b></a></li>
+                            <li>
+                            <li><a href="http://outsourceforum.org/blog/" class="change-new"><b>БЛОГ</b></a></li>
+                            <a href="http://outsourceforum.org/#contacts" class="change-new"> <b> КОНТАКТИ</b></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <content>
+        <div class="aboutevent">
+            <p class="textaboutevent">
+                20.10.2018<br><br>Приватні зустрічі з найкращими спікерами
+            </p>
+        </div>
+        <div class="maincalendar">
+            {% for item in lst %}
+            <div class="spekerinfo">
+		        <p class="speakername">{{ item[0] }}</p>
+                <div class="btnforevent">
+                    {% for time in item[1] %}
+                    {% if time == "Reserved" %}
+                        <button class="timeof">{{ time }}</button>
+                    {% else %}
+                        <button class="timeof" user-name="{{ item[0] }}" user-time="{{ time }}" onclick="reserve(this)">{{ time }}</button>
+                    {% endif %}
+                    {% endfor %}
+		        </div>
+	        </div>
+            {% endfor %}
+        </div>
+    </content>
+    <div class="faq">
+        <p style="text-align: center">
+            Text about FAQ
+        </p>
+    </div>
+    <div class="buyticket">
+        <button class="btnbuyticket"><a href="http://outsourceforum.org/registration_standard/" target="_blank" class="buyticketnew"><b>Купити квиток</b></a></button>
+    </div>
+    <div class="footerall">
+        <div class="footermain">
+            <div class="footertext">
+                <div class="footer-1 footer-grey">
+                    <b>ПРО ФОРУМ</b>
+                </div>
+                <div class="footer-1">
+                    <b>Реєстрація</b>
+                </div>
+                <div class="footer-1">
+                    <b>Доповідачам</b>
+                </div>
+                <div class="footer-1">
+                    <b>Партнерам</b>
+                </div>
+                <div class="footer-1">
+                    <b>Контакти</b>
+                </div>
+            </div>
+            <div class="footertext">
+                <div class="footer-2 footer-grey">
+                    <b>БІЛЬШЕ ПОДІЙ</b>
+                </div>
+                <div class="footer-2">
+                    <b>It Tour</b>
+                </div>
+                <div class="footer-2">
+                    <b>Private meetings</b>
+                </div>
+                <div class="footer-2">
+                    <b>Mini events</b>
+                </div>
+            </div>
+            <div class="footertext">
+                <div class="footer-3 footer-grey">
+                    <b>KIOF JOURNAL</b>
+                </div>
+                <div class="footer-3">
+                    <b>Interwiews</b>
+                </div>
+                <div class="footer-3">
+                    <b>Blog</b>
+                </div>
+                <div class="footer-3">
+                    <b>Video</b>
+                </div>
+                <div class="footer-3">
+                    <b>Community</b>
+                </div>
+            </div>
+            <div class="footertext">
+                <!--<div class="footer-4">
+                    <img src="img/facebook.png" class="sociallogo">
+                </div>
+                <div class="footer-4">
+                    <img src="img/youtube.png" class="sociallogo">
+                </div>
+                <div class="footer-4">
+                    <img src="img/instagram.png" class="sociallogo">
+                </div>-->
+            </div>
+        </div>
+        <div class="lastwhumade">
+            <p class="textaboutlembs">Lemberg Tech Business School ©2009 - 2018</p>
+        </div>
+    </div>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        function reserve(el) {
+    var txt;
+    var person = prompt("Please enter your name:", "Harry Potter");
+    if (person == null || person == "") {
+        txt = "User cancelled the prompt.";
+    } else {
+        txt = "Hello " + person + "! How are you today?";
+    }
+    // console.log(el.getAttribute("user-name"), el.getAttribute("user-time"), person)
+
+            $.post( "/postmethod", {
+      canvas_data: JSON.stringify([el.getAttribute("user-name"), el.getAttribute("user-time"), person])
+    }, function(err, req, resp){
+      window.location.href = "/results/"+resp["responseJSON"]["uuid"];
+    });
+        }
+    </script>
+</body>
+<!--<script src="js/humburger.js"></script>-->
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

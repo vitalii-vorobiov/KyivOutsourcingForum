@@ -1,0 +1,261 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    marging: 0% !important;
+    padding: 0% !important;
+    background-color: #040251;
+}
+.navigation-menu-big {
+    width: 100%;
+    background-color: #020635;
+}
+.kioflogo{
+    width: 12%;
+    margin: 1% 8%;
+}
+.right-menu-point {
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    text-decoration: none;
+}
+.right-menu-point:hover {
+    text-decoration: none;
+    color: #1F1AC5;
+    font-family: "Montserrat";
+}
+.about-mission {
+    color: #000;
+}
+/*info about speaker*/
+.textaboutevent {
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    text-align: center;
+    margin: 10%;
+    font-size: calc(2rem + 2vmin);
+}
+/*calendar*/
+.maincalendar {
+    margin: 0% 10%;
+    background-color: #147C9B;
+    background-image: url(/src/static/img/24231956_1523395924416088_8831846362118098742_ndsfvc.png);
+}
+.speakername {
+    width: 40%;
+    color: #FFFFFF;
+    font-family: "Montserrat";
+    text-align: left;
+    padding: 2%;
+    font-size: calc(1rem + 1.5vmin);
+}
+.btnforevent {
+    width: 60%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.timeof {
+    font-family: "Montserrat";
+    font-size: calc(1rem + 1vmin);
+    margin: 2%;
+    padding: 1% 1.5%;
+    border-radius: 10%;
+    border: 2px solid #040251;
+}
+.spekerinfo {
+    display: flex;
+    flex-direction:row;
+}
+/*buy ticket*/
+.buyticket {
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+.btnbuyticket {
+    padding: 1%;
+    color: #FFFFFF;
+    background-color: #010024;
+    font-family: "Montserrat";
+    font-size: calc(1rem + 1.5vmin);
+    border: none;
+    border-radius: 10%;
+}
+.buyticketnew {
+    text-decoration: none;
+    color: #fff;
+}
+a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:active {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.buyticket:active {
+    text-decoration: none;
+    color: #fff;
+}
+/*footer*/
+.footerall {
+    background-color: #010024;
+}
+.footermain {
+    padding: 4% 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer-1, .footer-2,  .footer-3 {
+    color:#FFFFFF;
+    padding: 5% 0%;
+    font-family: "Montserrat";
+    font-size: calc(1rem + 0.5vmin);
+}
+.footer-grey {
+    color: #646262;
+}
+.footer-4 {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20%;
+}
+.sociallogo {
+    width: 3%;
+    height: 3%;
+}
+.textaboutlembs {
+    text-align: center;
+    color: #646262;
+}
+.lastwhumade {
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+    font-family: "Montserrat";
+    font-size: calc(1rem + 0.5vmin);
+}
+
+@media screen and (min-width: 1101px) {
+    .navigation-menu-small {
+        display: none;
+    }
+    .left-menu {
+        width: 30%;
+    }
+    .left-menu-img {
+        width: 60%;
+        margin: 2% 1% 0% 5%;
+    }
+    .right-menu {
+        width: 100%;
+        margin: 1% 2% 1% 0%;
+    }
+    .right-menu-point {
+        font-size: calc(1rem + 0.5vmin);
+        margin: 0% 2%;
+    }
+    .right-menu-point:hover {
+        font-size: calc(1rem + 0.5vmin);
+    }
+    .navigation-menu-big {
+        display: flex;
+        flex-direction: row;
+    }
+    .right-menu {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1100px) {
+    .navigation-menu-small {
+        display: none;
+    }
+    .left-menu {
+        width: 30%;
+    }
+    .left-menu-img {
+        width: 80%;
+        margin: 2% 1% 0% 5%;
+    }
+    .right-menu {
+        width: 100%;
+        margin: 1% 2% 1% 0%;
+    }
+    .right-menu-point {
+        font-size: calc(1rem + 1.5vmin);
+        margin: 0% 1.5%;
+    }
+    .right-menu-point:hover {
+        font-size: calc(1rem + 1.5vmin);
+    }
+    .navigation-menu-big {
+        display: flex;
+        flex-direction: row;
+    }
+    .right-menu {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navigation-menu-big {
+        display: none;
+    }
+    .navigation-menu-small{
+        padding: 0%;
+        margin: 0%;
+    }
+    .navbar-header{
+        padding: 0%;
+        margin: 0%;
+    }
+    header {
+        padding: 0%;
+        margin: 0%;
+    }
+    .navbar {
+        padding: 0%;
+        margin: 0%;
+    }
+    .navbar-default {
+        padding: 0%;
+        margin: 0%;
+    }
+    .navbar-top {
+        padding: 0%;
+        margin: 0%;
+    }
+    .change-new {
+        text-decoration: none;
+        font-family: "Montserrat" !important;
+        font-size: calc(1rem + 0.8vmin) !important;
+        color: #eed05f !important;
+    }
+    .change-new:hover {
+        text-decoration: none;
+        font-family: "Montserrat" !important;
+        font-size: calc(1rem + 0.8vmin) !important;
+        color: #fff !important;
+    }
+}
